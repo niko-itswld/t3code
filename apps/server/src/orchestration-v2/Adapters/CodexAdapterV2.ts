@@ -1546,6 +1546,10 @@ export interface CodexAdapterV2Options {
   };
 }
 
+/**
+ * Constructs the Codex adapter from injected runtime services.
+ * Sessions translate native app-server events into orchestration events.
+ */
 export function makeCodexAdapterV2(adapterOptions: CodexAdapterV2Options): ProviderAdapterV2Shape {
   const { clientFactory, fileSystem, idAllocator, serverConfig } = adapterOptions;
   const continuationRequests = adapterOptions.continuationRequests;

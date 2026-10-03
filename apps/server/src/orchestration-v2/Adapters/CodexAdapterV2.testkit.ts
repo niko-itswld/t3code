@@ -43,6 +43,10 @@ export const CodexOrchestratorReplayHarnessError = Schema.Union([
 ]);
 export type CodexOrchestratorReplayHarnessError = typeof CodexOrchestratorReplayHarnessError.Type;
 
+/**
+ * Overrides child metadata lookups in a replay while preserving root requests.
+ * The callback can return metadata or a typed error to exercise lookup recovery.
+ */
 export function withCodexReplayChildMetadata(
   client: CodexClient.CodexAppServerClient["Service"],
   transcript: CodexReplay.CodexAppServerReplayTranscript,
